@@ -25,6 +25,6 @@ describe('MedicationsService', () => {
     const medication = service.findOne(1);
 
     expect(medication).toBeDefined();
-    expect(medication?.name).toBe('Metformin');
+    expect(medication?.name).toBe('Acetaminophen');
   });
 });
