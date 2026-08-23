@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: medication-api
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: medication-api
+
+  template:
+    metadata:
+      labels:
+        app: medication-api
+
+    spec:
+      containers:
+        - name: medication-api
+          image: medication-api:latest
+
+          ports:
+            - containerPort: 3000
