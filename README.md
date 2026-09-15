@@ -52,24 +52,7 @@ A major goal of this project was understanding **where Docker fits into the deve
 
 Docker provides a consistent environment for running the application, while GitHub Actions provides an automated environment for validating that application.
 
-```text
-Application Code
-       |
-       v
-Automated Tests
-       |
-       v
-Docker Build
-       |
-       v
-GitHub Actions
-       |
-       v
-Validated Application
-       |
-       v
-Deployable Artifact
-```
+> **Application Code  →  Automated Tests  →  Docker Build  →  GitHub Actions  →  Validated Application  →  Deployable Artifact**
 
 This creates a workflow where changes can be tested and packaged consistently before they move toward deployment.
 
