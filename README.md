@@ -2,7 +2,7 @@
 
 ### A containerized NestJS REST API exploring how Docker fits into modern application development, testing, and deployment.
 
-> **Portfolio Project · Backend Development · Docker · CI/CD**
+> **Portfolio Project · Javascript/Typescript · NodeJS · Jest · NestJS · Docker · GitHub Actions · CI/CD**
 
 ---
 
