@@ -1,98 +1,184 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Medication API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+### A containerized NestJS REST API exploring how Docker fits into modern application development, testing, and deployment.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+> **Portfolio Project · Backend Development · Docker · CI/CD**
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Overview
 
-## Project setup
+**Medication API** is a small REST API built with **NestJS and TypeScript** that provides structured medication information through a simple interface.
 
-```bash
-$ npm install
+The application itself is intentionally straightforward. The focus of this project is what surrounds the application: **containerization, testing, automation, and reproducible development environments**.
+
+I built this project to explore a common question in modern software development:
+
+> **Once an application works, how do we make it easier to build, test, share, and run consistently?**
+
+That led me to Docker.
+
+Rather than treating Docker as an isolated technology, this project explores where **containerization fits into the larger development workflow** — from writing and testing code to creating a reproducible application environment and automatically validating that environment through GitHub Actions.
+
+---
+
+## What Can It Do?
+
+The API provides structured medication information through a simple REST interface.
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center"><strong>Medication Name</strong><br><sub>Identifies the medication</sub></td>
+<td align="center"><strong>Dosage</strong><br><sub>Available dosage information</sub></td>
+<td align="center"><strong>Administration Route</strong><br><sub>How the medication is administered</sub></td>
+</tr>
+<tr>
+<td align="center"><strong>Clinical Role</strong><br><sub>Primary therapeutic purpose</sub></td>
+<td align="center"><strong>Category</strong><br><sub>Medication classification</sub></td>
+<td align="center"><strong>Chemical Formula</strong><br><sub>Molecular composition</sub></td>
+</tr>
+<tr>
+<td align="center"><strong>Drug Interactions</strong><br><sub>Known interaction information</sub></td>
+</tr>
+</table>
+
+</div>
+
+## Docker and CI in the Development Process
+
+A major goal of this project was understanding **where Docker fits into the development lifecycle**, rather than treating containerization as a standalone technology.
+
+Docker provides a consistent environment for running the application, while GitHub Actions provides an automated environment for validating that application.
+
+```text
+Application Code
+       |
+       v
+Automated Tests
+       |
+       v
+Docker Build
+       |
+       v
+GitHub Actions
+       |
+       v
+Validated Application
+       |
+       v
+Deployable Artifact
 ```
 
-## Compile and run the project
+This creates a workflow where changes can be tested and packaged consistently before they move toward deployment.
+
+The project therefore uses Docker not only as a way to run the application, but as part of a larger workflow involving **development, testing, automation, and deployment preparation**.
+
+## What I Learned
+
+* **REST API development** — creating a modular backend with NestJS
+* **TypeScript** — using strict typing to improve maintainability and reliability
+* **Docker** — packaging an application and its runtime into a reproducible environment
+* **Multi-stage builds** — separating build dependencies from the production runtime
+* **Containerized development** — running the application in a consistent environment
+* **Automated testing** — validating application behavior with Jest
+* **GitHub Actions** — automating tests and Docker builds
+* **CI/CD concepts** — understanding how application code moves toward a deployable artifact
+* **Reproducible environments** — reducing differences between development and CI environments
+
+## The Stack
+
+| Technology         | Purpose                                |
+| ------------------ | -------------------------------------- |
+| **TypeScript**     | Application language and strict typing |
+| **Node.js**        | Server runtime                         |
+| **NestJS**         | REST API framework                     |
+| **Docker**         | Application containerization           |
+| **GitHub Actions** | CI automation                          |
+| **Jest**           | Automated testing                      |
+| **npm**            | Package management                     |
+
+## Project Setup
+
+### 1. Clone the Repository
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone <repository-url>
+cd <repository-directory>
 ```
 
-## Run tests
+### 2. Install Dependencies
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm install
 ```
 
-## Deployment
+### 3. Run the Application
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+#### Development
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm run start
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+#### Watch Mode
 
-## Resources
+```bash
+npm run start:dev
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+## Docker
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Build the Docker image:
 
-## Support
+```bash
+docker build -t medication-api .
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Run the container:
 
-## Stay in touch
+```bash
+docker run -p 3000:3000 medication-api
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+The API will then be available at:
 
-## License
+```text
+http://localhost:3000
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+## Run Tests
+
+```bash
+npm run test
+```
+
+## Next Steps
+
+### Container Registry
+
+Push the Docker image to **GitHub Container Registry (GHCR)** to create a versioned, distributable application artifact.
+
+### Database Integration
+
+Replace the current in-memory medication data with a persistent database to explore:
+
+* PostgreSQL
+* TypeORM
+* Database migrations
+* Persistent container storage
+
+### Deployment
+
+Deploy the containerized API to a cloud platform and explore the transition from:
+
+**Local Development → CI → Container Registry → Cloud Deployment**
+
+### API Documentation
+
+Add Swagger/OpenAPI documentation to make the API easier for other developers to discover and consume.
+
+---
+
+**Project Goal:** Use a small backend application as a practical way to understand how **Docker, testing, CI/CD, and deployment workflows fit around application development**.
