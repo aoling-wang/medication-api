@@ -11,7 +11,7 @@
 **Medication API** is a small REST API built with **NestJS and TypeScript** that provides structured medication information through a simple interface.
 
 <p align="center">
-  <img width="491" height="300" alt="image" src="https://github.com/user-attachments/assets/520a35a7-2c76-4826-b62c-2f8e458c3cea" />
+  <img width="655" height="400" alt="image" src="https://github.com/user-attachments/assets/520a35a7-2c76-4826-b62c-2f8e458c3cea" />
 </p>
 
 The application itself is intentionally straightforward. The focus of this project is what surrounds the application: **containerization, testing, automation, and reproducible development environments**.
